@@ -1,0 +1,27 @@
+.aside-bg-color {
+  background-color: $aside-bg-color;
+
+  .image-wrapper {
+    height: 40px;
+    width: 40px;
+    overflow: hidden; 
+    border-radius: 50%;
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+
+  .nav-item {
+    margin-bottom: 40px;
+
+    .nav-link {
+      .nav-text {
+        margin-left: 10px;
+        font-size: 20px;
+        color: #4b4c4d;
+      }
+    }
+  }
+}
