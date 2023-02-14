@@ -3,6 +3,9 @@
 @import "assets/scss/layout/index";
 
 
+
+// for cdkoverlay module
+@import '../node_modules/@angular/cdk/index';
 // for icons
 @import '../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
 /* Importing Bootstrap SCSS file. */
@@ -10,3 +13,4 @@
 
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+@import '@angular/cdk/overlay-prebuilt.css';

@@ -8,12 +8,12 @@ const routes: Routes = [{
   path: '', component: EmployeeComponent,
 
   children: [
-    {
-      path: '',
-      pathMatch: 'full',
-      redirectTo: 'form'
+    // {
+    //   path: '',
+    //   pathMatch: 'full',
+    //   redirectTo: 'form'
 
-    },
+    // },
     {
       path: 'form',
       component: EmployeeFormComponent

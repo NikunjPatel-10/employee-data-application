@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-
+import { CdkService } from './service/cdk.service';
+import {OverlayModule} from '@angular/cdk/overlay'
 
 
 @NgModule({
@@ -11,11 +12,13 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     SidebarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    OverlayModule
   ],
   exports:[
     HeaderComponent,
-    SidebarComponent
-  ]
+    SidebarComponent,
+  ],
+  providers:[CdkService]
 })
 export class CoreModule { }
