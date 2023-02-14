@@ -14,14 +14,28 @@
   }
 
   .nav-item {
-    margin-bottom: 40px;
+    
+   .active,
+    :hover{
+      background-color: #e9eaee;
+      color: $nav-link-hover-color;
+    }
 
+  }
     .nav-link {
+      margin-right: -24px;
+      margin-left: -24px;
+      padding: 20px 35px;
+      color: $nav-link-color;
       .nav-text {
-        margin-left: 10px;
+        margin-left: 20px;
         font-size: 20px;
-        color: #4b4c4d;
+        font-weight:500;
       }
+      .nav-icon{
+        font-size: 25px;
+      }
+   
     }
   }
-}
+ 
