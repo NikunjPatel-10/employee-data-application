@@ -1,0 +1,18 @@
+.employee-navbar{
+    background-color: $bg-color;
+}
+
+.nav-number:before{
+    content: "2";
+    position: absolute;
+    top: -8%;
+    right: -8%;
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
