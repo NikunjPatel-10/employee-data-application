@@ -1,3 +1,22 @@
 {
-    "employee" :[ ]
+  "employee": [
+    {
+      "name": "nikunj",
+      "address": "dddd",
+      "mobileNo": "123243",
+      "gender": "male",
+      "salary": "12",
+      "birthDate": "2023-02-02",
+      "id": 1
+    },
+    {
+      "name": "abc",
+      "address": "wdsfdfdf",
+      "mobileNo": "1324345",
+      "gender": "female",
+      "salary": "1213",
+      "birthDate": "2023-02-09",
+      "id": 2
+    }
+  ]
 }

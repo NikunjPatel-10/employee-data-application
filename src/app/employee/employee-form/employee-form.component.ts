@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ApiService } from 'src/app/core/service/api.service';
 
 @Component({
   selector: 'app-employee-form',
@@ -9,14 +10,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class EmployeeFormComponent {
 public employeeForm : FormGroup
 public isSubmitted:boolean 
-constructor(public formBuilder: FormBuilder){
+constructor(public formBuilder: FormBuilder, private apiservice :ApiService){
 this.isSubmitted = false;
   this.employeeForm = this.formBuilder.group({
-    name:['' ,[Validators.required ,Validators.pattern('[a-zA-Z]*'), Validators.minLength(3)]],
+    name:['' ,[Validators.required ,Validators.pattern(/^[a-zA-Z\s]*$/), Validators.minLength(3)]],
     address:['', [Validators.required]],
-    mobileNo :['' , [Validators.required,Validators.pattern('[0-9]*'), Validators.minLength(5)]],
+    mobileNo :['' , [Validators.required,Validators.pattern('^[0-9]*$'), Validators.minLength(5)]],
     gender:['' , [Validators.required]],
-    salary:['' , [Validators.required , Validators.pattern('[0-9]*')]],
+    salary:['' , [Validators.required , Validators.pattern('^[0-9]*$')]],
     birthDate:['' , [Validators.required]]
   })
 
@@ -26,10 +27,11 @@ get employeeFormControl() {
  return this.employeeForm.controls
 }
 // to save employee Data
-public getEmployeeData(){
-  this.isSubmitted = true
- console.log( this.employeeForm.value);
- this.employeeForm.reset()
+public saveEmployeeData(){
+this.apiservice.postEmployeeData(this.employeeForm.value).subscribe(res=>{
+  console.log(res); 
+})
+this.employeeForm.reset()
 }
 
 

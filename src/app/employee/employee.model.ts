@@ -1,5 +1,5 @@
 export class employee{
-    id?:string
+    id?:number;
     name?:string;
     address?:string;
     mobileNo?:string;

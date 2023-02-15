@@ -10,11 +10,9 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component';
 export class EmployeeComponent {
 
 
-  constructor(private cdkService: CdkService) {
+  constructor() {
 
   }
   
-  public openOverlay() {
-    this.cdkService.displayOverlay(EmployeeFormComponent)
-  }
+ 
 }

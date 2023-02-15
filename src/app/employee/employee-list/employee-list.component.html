@@ -1,1 +1,33 @@
-<p>employee-list works!</p>
+<div class="h-100 w-100 p-4">
+    <div class="d-flex justify-content-end">
+        <div class="p-3">
+            <button class="btn btn-primary" (click)="openOverlay()">Add employee</button>
+        </div>
+    </div>
+
+    <div class="container mt-5 p-3">
+        <table class="table border">
+            <thead class="thead-inverse">
+                <th class="thead">Name</th>
+                <th class="thead">Mobile No</th>
+                <th class="thead">Gender</th>
+                <th class="thead">Salary</th>
+                <th class="thead">Action</th>
+            
+            <tbody >
+                <tr *ngFor="let data of employeeData" >
+                    <td>{{data.name}}</td>
+                    <td>{{data.mobileNo}}</td>
+                    <td>{{data.gender}}</td>
+                    <td>{{data.salary}}</td>
+                    <td>
+                        <div>
+                            <button class="btn btn-primary ">Edit</button>
+                            <button class="ms-2 btn btn-danger">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
