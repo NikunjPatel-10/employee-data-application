@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CdkService } from './service/cdk.service';
-import {OverlayModule} from '@angular/cdk/overlay'
+import { OverlayModule } from '@angular/cdk/overlay'
 
 
 @NgModule({
@@ -15,10 +15,10 @@ import {OverlayModule} from '@angular/cdk/overlay'
     CommonModule,
     OverlayModule
   ],
-  exports:[
+  exports: [
     HeaderComponent,
     SidebarComponent,
   ],
-  providers:[CdkService]
+  providers: [CdkService]
 })
 export class CoreModule { }

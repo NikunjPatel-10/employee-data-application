@@ -6,7 +6,7 @@ import { EmployeeComponent } from './employee.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CoreModule } from '../core/core.module';
+
 
 
 @NgModule({
@@ -19,7 +19,6 @@ import { CoreModule } from '../core/core.module';
     CommonModule,
     EmployeeRoutingModule,
     ReactiveFormsModule,
-    CoreModule
   ]
 })
 export class EmployeeModule { }

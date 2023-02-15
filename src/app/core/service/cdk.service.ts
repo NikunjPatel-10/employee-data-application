@@ -14,12 +14,14 @@ export class CdkService {
     this.overlayRef = this.overlay.create({
 
       hasBackdrop: true,
-      backdropClass: 'overlay-backdrop',
-      panelClass: 'overlay-panel',
+      // backdropClass: 'overlay-backdrop',
+      // panelClass: 'overlay-panel',
       
       positionStrategy: this.overlay
         .position()
         .global()
+        .centerHorizontally()
+        .centerVertically()
      
     })
 
