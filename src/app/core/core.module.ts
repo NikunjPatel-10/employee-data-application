@@ -5,6 +5,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { CdkService } from './service/cdk.service';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { ApiService } from './service/api.service';
+import { DataCommunicationService } from './service/data-communication.service';
 
 
 
@@ -21,6 +22,6 @@ import { ApiService } from './service/api.service';
     HeaderComponent,
     SidebarComponent,
   ],
-  providers: [CdkService, ApiService]
+  providers: [CdkService, ApiService , DataCommunicationService]
 })
 export class CoreModule { }

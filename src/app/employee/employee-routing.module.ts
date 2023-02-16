@@ -7,20 +7,25 @@ import { EmployeeComponent } from './employee.component';
 const routes: Routes = [{
   path: '', component: EmployeeComponent,
 
-  children: [
+  children:[
     {
-      path: '',
-      pathMatch: 'full',
-      redirectTo: 'list'
+      path:'',
+      pathMatch:'full',
+      redirectTo:'list'
+    },
 
+    {
+      path:'add',
+      component:EmployeeFormComponent
+    },
+
+    {
+      path:'list',
+      component:EmployeeListComponent
     },
     {
-      path: 'form',
-      component: EmployeeFormComponent
-    },
-    {
-      path: 'list',
-      component: EmployeeListComponent
+      path:'edit/:id',
+      component:EmployeeListComponent
     }
   ]
 },

@@ -26,7 +26,10 @@ export class CdkService {
     })
 
     const portal = new ComponentPortal(component);
-    this.overlayRef.attach(portal);
+    const componentRef=this.overlayRef.attach(portal);
     this.overlayRef.backdropClick().subscribe(() => this.overlayRef.detach());
+    return componentRef
   }
+
+
 }

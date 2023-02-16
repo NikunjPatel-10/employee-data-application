@@ -8,6 +8,7 @@ const routes: Routes = [
     pathMatch:'full',
     redirectTo:'employee'
   },
+ 
   
   { path: 'employee', loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule) }];
 

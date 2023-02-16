@@ -6,6 +6,7 @@ import { EmployeeComponent } from './employee.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     EmployeeRoutingModule,
     ReactiveFormsModule,
+    RouterModule
   ]
 })
 export class EmployeeModule { }
