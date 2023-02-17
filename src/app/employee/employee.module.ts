@@ -7,6 +7,7 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 
 
@@ -14,7 +15,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     EmployeeComponent,
     EmployeeFormComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     CommonModule,

@@ -18,15 +18,15 @@
             <tbody >
                 <tr *ngFor="let data of employeeData" class=" bg-light border">
                     <td>{{data.id}}</td>
-                    <td>{{data.name}}</td>
+                    <td>{{data.name | titlecase}}</td>
                     <td>{{data.mobileNo}}</td>
-                    <td>{{data.gender}}</td>
-                    <td>{{data.salary}}</td>
+                    <td>{{data.gender | uppercase}}</td>
+                    <td>{{data.salary | currency:'INR'}}</td>
                     <td>
                         <div>
                             <button class="btn btn-primary" (click)="editEmployeeData(data, data.id)">Edit</button>
                             <button class="ms-2 btn btn-danger" (click)="deleteEmployee(data.id)">Delete</button>
-                            <button class="ms-2 btn btn-success">Details</button>
+                            <button class="ms-2 btn btn-success" (click)="getDetails(data.id)">Details</button>
                         </div>
                     </td>
                 </tr>
