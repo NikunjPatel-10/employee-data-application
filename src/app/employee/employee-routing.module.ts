@@ -13,12 +13,7 @@ const routes: Routes = [{
       pathMatch:'full',
       redirectTo:'list'
     },
-
-    {
-      path:'add',
-      component:EmployeeFormComponent
-    },
-
+    
     {
       path:'list',
       component:EmployeeListComponent

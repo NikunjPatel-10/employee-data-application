@@ -5,7 +5,7 @@
       "address": "ghandhiwadi",
       "mobileNo": "9763654674",
       "gender": "male",
-      "salary": "18000",
+      "salary": "180",
       "birthDate": "0009-02-08",
       "id": 1
     },
@@ -14,45 +14,18 @@
       "address": "JHWDBVUWD",
       "mobileNo": "278468",
       "gender": "male",
-      "salary": "224242424",
+      "salary": "20000",
       "birthDate": "2023-02-11",
       "id": 2
     },
     {
-      "name": "ravi singh",
-      "address": "ghandhiwadi",
-      "mobileNo": "9763654674",
-      "gender": "male",
-      "salary": "180000",
-      "birthDate": "0009-02-08",
+      "name": "vishvani patel",
+      "address": "qewwrf",
+      "mobileNo": "12134",
+      "gender": "female",
+      "salary": "23244",
+      "birthDate": "2023-02-02",
       "id": 3
-    },
-    {
-      "name": "nikunnj patel",
-      "address": "JHWDBVUWD",
-      "mobileNo": "278468",
-      "gender": "male",
-      "salary": "22",
-      "birthDate": "2023-02-11",
-      "id": 4
-    },
-    {
-      "name": "nikunj patel",
-      "address": "JHWDBVUWD",
-      "mobileNo": "278468",
-      "gender": "male",
-      "salary": "22",
-      "birthDate": "2023-02-11",
-      "id": 5
-    },
-    {
-      "name": "nikunj patel",
-      "address": "JHWDBVUWD",
-      "mobileNo": "278468",
-      "gender": "male",
-      "salary": "224242424",
-      "birthDate": "2023-02-11",
-      "id": 6
     }
   ]
 }
