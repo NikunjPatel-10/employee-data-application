@@ -6,6 +6,7 @@ import { CdkService } from './service/cdk.service';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { ApiService } from './service/api.service';
 import { DataCommunicationService } from './service/data-communication.service';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,7 +17,8 @@ import { DataCommunicationService } from './service/data-communication.service';
   ],
   imports: [
     CommonModule,
-    OverlayModule
+    OverlayModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,

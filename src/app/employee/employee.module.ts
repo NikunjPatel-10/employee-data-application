@@ -8,6 +8,8 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { SharedModule } from '../shared/shared.module';
+import { SearchPipe } from '../shared/pipe/search.pipe';
 
 
 
@@ -22,7 +24,9 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
     CommonModule,
     EmployeeRoutingModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    SharedModule,
+    
   ]
 })
 export class EmployeeModule { }

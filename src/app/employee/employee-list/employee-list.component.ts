@@ -15,7 +15,7 @@ export class EmployeeListComponent {
   public employeeData: employee[]
   public employeeId!: number
   public data: any
- 
+ public employeeInfo :any
 
 
   /**
@@ -27,7 +27,7 @@ export class EmployeeListComponent {
    */
   constructor(private cdkService: CdkService, private apiService: ApiService, public dataCommunicationService: DataCommunicationService, public router: Router) {
     this.employeeData = [];
-    // this.employeeInfo = []
+    
   }
 
   ngOnInit(): void {
@@ -37,14 +37,22 @@ export class EmployeeListComponent {
       }
     })
     this.getEmployeeData();
+
+    this.dataCommunicationService.employeeInfo$.subscribe((res) =>{
+      console.log(res);
+      this.employeeInfo = res
+  })
   }
   
   public openOverlay() {
     this.cdkService.displayOverlay(EmployeeFormComponent);
   }
 
-  // to delete employee records 
-
+  
+/**
+ * to delete employee records 
+ * @param employeeId 
+ */
   public deleteEmployee(employeeId: number) {
     alert("are you sure to delete data")
     this.apiService.deleteEmployeeData((employeeId)).subscribe(res => {
@@ -65,21 +73,21 @@ export class EmployeeListComponent {
     overlayRef.instance.text = 'Update'
   }
 
+  /**
+   * 
+   * @param id 
+   */
   public getDetails(id: number) {
     this.router.navigate(['employee/details',id])
-    // const overlayRef = this.cdkService.displayOverlay(EmployeeFormComponent);
-    // this.employeeInfo = overlayRef.instance.employeeForm.patchValue(Employee)
-    // console.log(this.employeeInfo);
-    // this.dataCommunicationService.employeeInfo.next(this.employeeInfo);
-    // this.cdkService.overlayRef.detach()
-
   }
 
 
   // to get the employeedata from server
 
   public getEmployeeData() {
-    this.apiService.getEmployeeData().subscribe((res) => {
+    this.apiService.getEmployeeData().subscribe((res:employee[]) => {
+      console.log(res);
+      
       this.employeeData = res
     })
   }

@@ -16,7 +16,7 @@
                 <th scope="col">Action</th>
             </thead> 
             <tbody >
-                <tr *ngFor="let data of employeeData" class=" bg-light border">
+                <tr *ngFor="let data of employeeData | search :employeeInfo"  class=" bg-light border">
                     <td>{{data.id}}</td>
                     <td>{{data.name | titlecase}}</td>
                     <td>{{data.mobileNo}}</td>

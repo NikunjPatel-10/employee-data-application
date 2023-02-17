@@ -6,8 +6,8 @@ import { employee } from 'src/app/employee/employee.model';
 export class DataCommunicationService {
 public listData : Subject<employee>;
 public listData$: Observable<employee>;
-public employeeInfo : Subject<employee>;
-public employeeInfo$ : Observable<employee>
+public employeeInfo : Subject<any>;
+public employeeInfo$ : Observable<any>
   constructor() {
     this.listData = new Subject();
     this.listData$ = this.listData.asObservable();
