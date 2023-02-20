@@ -1,11 +1,23 @@
 <div class="h-100 w-100 p-4">
     <div class="d-flex justify-content-end">
+      
         <div class="p-3">
             <button class="btn btn-primary" (click)="openOverlay()">Add employee</button>
         </div>
     </div>
 
     <div class="container py-5  ">
+        <div class="mb-2">
+            <div class="d-flex justify-content-end">
+                    <label>Filter By Name</label> : 
+                    <select  (change)="sortData($event)"  [(ngModel)]="sorting" name="name" >  
+                        <option value="by-default" [selected]="true" >By default</option>
+                        <option value = "asec" >A-Z</option>
+                        <option value = "dsec">Z-A</option>
+                    </select>
+            </div>
+        </div>
+        <div>
         <table class=" w-100">
             <thead class="bg-secondary ">
                 <th scope="col">Id</th>
@@ -16,7 +28,7 @@
                 <th scope="col">Action</th>
             </thead> 
             <tbody >
-                <tr *ngFor="let data of employeeData | search :employeeInfo"  class=" bg-light border">
+                <tr *ngFor="let data of employeeData | search :employeeInfo | sort:sorting "  class=" bg-light border">
                     <td>{{data.id}}</td>
                     <td>{{data.name | titlecase}}</td>
                     <td>{{data.mobileNo}}</td>
@@ -32,5 +44,6 @@
                 </tr>
             </tbody>
         </table>
+    </div>
     </div>
 </div>

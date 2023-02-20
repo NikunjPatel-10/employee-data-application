@@ -26,6 +26,15 @@
       "salary": "23244",
       "birthDate": "2023-02-02",
       "id": 3
+    },
+    {
+      "name": "www",
+      "address": "asddff",
+      "mobileNo": "132343",
+      "gender": "male",
+      "salary": "12323",
+      "birthDate": "2023-02-15",
+      "id": 4
     }
   ]
 }

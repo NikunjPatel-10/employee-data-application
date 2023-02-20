@@ -1,10 +1,10 @@
 <div class="d-flex justify-content-center align-items-center h-100">
     <div class="border border-dark p-3">
-    <p class="text-dark">Name :{{employeeInfo.name | titlecase}}</p>
-    <p class="text-dark">Address :{{employeeInfo.address}}</p>
-    <p class="text-dark">Mobile No :{{employeeInfo.mobileNo}}</p>
-    <p class="text-dark">Gender :{{employeeInfo.gender | uppercase}}</p>
-    <p class="text-dark">Salary :{{employeeInfo.salary | currency:'INR'}}</p>
-    <p class="text-dark">BirthDate :{{employeeInfo.birthDate | date}}</p>
-</div>
+        <p class="text-dark">Name : {{employeeInfo.name | titlecase}}</p>
+        <p class="text-dark">Address : {{employeeInfo.address}}</p>
+        <p class="text-dark">Mobile No : {{employeeInfo.mobileNo}}</p>
+        <p class="text-dark">Gender : {{employeeInfo.gender | uppercase}}</p>
+        <p class="text-dark">Salary : {{employeeInfo.salary | currency:'INR'}}</p>
+        <p class="text-dark">BirthDate : {{employeeInfo.birthDate | date :'dd/MM/yyyy'}}</p>
+    </div>
 </div>
