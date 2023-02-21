@@ -10,10 +10,10 @@
         <div class="mb-2">
             <div class="d-flex justify-content-end">
                     <label>Filter By Name</label> : 
-                    <select  (change)="sortData($event)"  [(ngModel)]="sorting" name="name" >  
-                        <option value="by-default" [selected]="true" >By default</option>
-                        <option value = "asec" >A-Z</option>
-                        <option value = "dsec">Z-A</option>
+                    <select  (change)="sortData($event)"  [(ngModel)]="sorting"  >  
+                       <option value="by-default">By-defult</option>
+                       <option value="asec">A-Z</option>
+                       <option value="dsec">Z-A</option>
                     </select>
             </div>
         </div>
